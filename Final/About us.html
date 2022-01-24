@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {font-family: Verdana, sans-serif;
+background-image: url("data:image/jpeg;base64,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");
+background-size: cover;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  min-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.bottom-left {  border:100px;
+		font-size:30px;
+		text-align:center;
+		padding:0px;
+		background-color:#87ceeb;
+		background-clip:border-box;
+			}
+.top-right {
+			  position: absolute;
+			  top: 8px;
+			  right: 16px;
+			 text-decoration:none; 
+			 font-size:25px;
+			 margin-top:18px;
+			 margin-right:20px;
+			color:white
+				}
+
+		.top-right a{text-decoration:none;
+				color:white;
+				}
+		@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar {display:flex;
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:70px;
+	background-color:#fa9b36;
+	border-right:2px;
+	margin-top:15px;
+	margin-top:15px;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.25);
+	justify-content:center;
+	border-radius:100px 0px 100px 0px;
+	}
+.navbar__link{
+		display:flex;
+		align-items:center;
+		background:#fa9b36;
+		color:black;
+		padding:12px;
+		text-decoration:none;
+		font-weight:bold;
+		font-size:20px;
+		border-bottom:1px solid #fa9b36;
+	}
+.material-icons{margin-right:12px;}
+.navbar__link:hover{color:white;}
+
+		#tptkcontent{justify-content:space-between; display:flex; font-size:17px;}
+		#highlights{ text-decoration:underline; margin-left:30px;}
+		#highlightul{font-size:20px; margin-left:50px;}
+		.feedbacks{margin-left:30px; text-decoration:underline;}
+		.feedbackcontent{margin-left:70px;}
+
+		body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+
+/* Bar Graph Vertical */
+.bar-graph .year {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+}
+
+.bar-graph-vertical {
+  margin-top: 80px;
+  max-width: 680px;
+}
+
+.bar-graph-vertical .bar-container {
+  float: left;
+  height: 150px;
+  margin-right: 8px;
+  position: relative;
+  text-align: center;
+  width: 40px;
+}
+
+.bar-graph-vertical .bar {
+  border-radius: 3px;
+  bottom: 40px;
+  position: absolute;
+  width: 40px;
+}
+
+.bar-graph-vertical .year {
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.bar-graph-two .bar::after {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  color: #fff;
+  content: attr(data-percentage);
+  font-weight: 700;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 24px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.bar-graph-two .bar-one .bar {
+  background-color: #64b2d1;
+  -webkit-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+  -moz-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+  animation: show-bar-one-vertical 1.2s 0.1s forwards;
+}
+
+.bar-graph-two .bar-two .bar {
+  background-color: #5292ac;
+  -webkit-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+  -moz-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+  animation: show-bar-two-vertical 1.2s 0.2s forwards;
+}
+
+.bar-graph-two .bar-three .bar {
+  background-color: #407286;
+  -webkit-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+  -moz-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+  animation: show-bar-three-vertical 1.2s 0.3s forwards;
+}
+
+.bar-graph-two .bar-four .bar {
+  background-color: #2e515f;
+  -webkit-animation: show-bar-four-vertical 1.2s 0.4s forwards;
+  -moz-animation: show-bar-four-vertical 1.2s 0.4s forwards;
+  animation: show-bar-four-vertical 1.2s 0.4s forwards;
+}
+
+/* Bar Graph Vertical Animations */
+@-webkit-keyframes show-bar-one-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 40%;
+  }
+}
+
+@-webkit-keyframes show-bar-two-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 55%;
+  }
+}
+
+@-webkit-keyframes show-bar-three-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 68%;
+  }
+}
+
+@-webkit-keyframes show-bar-four-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 82%;
+  }
+}
+
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+		
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://media-exp1.licdn.com/dms/image/C561BAQH3btCghFR_kg/company-background_10000/0?e=2159024400&v=beta&t=oL1fdme13R_ksHYTQX8e_S_aOL1qxZJuISQxk-x5FxQ" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2017/10/infra2-600x400.jpg" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2015/08/1.jpg" style="width:100%"; height="366px">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="container1">
+  <div class="bottom-left">About Us</div>
+  <div class="top-right"><a href="https://www.kpriet.ac.in/">HOME</a>>&nbspABOUT US</div>
+</div>
+<div class="navbar">
+		<a href="About us.html" class="navbar__link">
+			<span class="material-icons">info</span>About us</a>
+		<a href="Statistics.html" class="navbar__link">
+			<span class="material-icons">trending_up</span>Statistics</a>
+		<a href="Recruiters.html" class="navbar__link">
+			<span class="material-icons">groups</span>Our Recruiters</a>
+		<a href="Teamplacement.html" class="navbar__link">
+			<span class="material-icons">business_center</span>Team Placement</a>
+		<a href="Training.html" class="navbar__link">
+			<span class="material-icons">model_training</span>Trainings</a>
+		<a href="Testimonial page.html" class="navbar__link">
+			<span class="material-icons">how_to_reg</span>Testimonials</a>
+		<a href="contactus.html" class="navbar__link">
+			<span class="material-icons">contact_phone</span>Contact Us</a>
+</div>
+<div id="bi1">
+<div id="tptk">
+	<p id="tptkhead" align="center" style="font-size:18px;"><h2 style="float:left; margin:30px 50px 20px 90px;">ABOUT US</h2>
+	<p style="margin-left:600px; font-size:25px;"><b>Think Placement! Join KPRIET!</b></p></p>
+		<img src="Aboutus1.jpeg" width="330px" height="180px" style="position:relative;margin:10px 20px 20px 30px;float:left;clear:both;display:flex;">
+	<img src="Aboutus2.jpeg" width="330px" height="180px" style="position:relative;margin:30px 40px 20px 30px;float:left;clear:both;display:flex;"><br>
+	
+	<p id="tptkcontent"><i>At KPRIET, we strongly believe in complementing the academic endeavors by providing highly comprehensive placements to our students. Placements have always been excellent, as we are one among the top preferred destinations to recruit from, for a large number of companies. We offer pre-placement training to our students in the area of both technical and soft skills, to make them ‘Plug & Play’ in the industry.<br><br>
+
+Talents go barely unrecognized in KPR institute of Engineering and technology, as we leave no stone unturned and we have got full potential to place 100% of the eligible students.</i></p>
+<label style="margin-right:230px; float:right; clear:both;font-size:25px; text-decoration:underline;">PLACEMENTS SO FAR</label>
+		<section class="bar-graph bar-graph-vertical bar-graph-two" style="float:right;clear:both; margin-right:240px;margin-bottom:30px;">
+    <div class="bar-one bar-container">
+    <div class="bar" data-percentage="82%"></div>
+    <span class="year">2016</span>
+  </div>
+  <div class="bar-one bar-container">
+    <div class="bar" data-percentage="84%"></div>
+    <span class="year">2017</span>
+  </div>
+  <div class="bar-two bar-container">
+    <div class="bar" data-percentage="88.7%"></div>
+    <span class="year">2018</span>
+  </div>
+  <div class="bar-three bar-container">
+    <div class="bar" data-percentage="89.33%"></div>
+    <span class="year">2019</span>
+  </div>
+  <div class="bar-four bar-container">
+    <div class="bar" data-percentage="100%"></div>
+    <span class="year">2020</span>
+  </div>
+</section><br><br><br>
+<list>
+	<p>Get the KPR Advantage:</p>
+	<ul>
+	<li>Dream Offers</li>
+	<li>Super Dream Offers</li>
+	<li>Placements in top IT product companies</li>
+	<li>Placements in top IT services companies</li>
+	<li>Placements in top core Engineering Companies</li>
+	<li>Internships</li>
+	<li>Training from Expert Team</li>
+	<li>Technical classes and Workshops</li>
+	</ul>
+</list> 
+</div>
+</div>
+<br>
+<div id="bi2">
+<div id="finaldiv">
+	<h1 id="highlights" align="left">2021 Placement<br> Highlights</h1>
+	<ul id="highlightul">
+		<li>Alpha Pi – 16 LPA – 1 Student</li>
+		<li>HPE – 10 LPA – 5 Students</li>
+		<li>Kaar Technologies – 6.5 LPA – 4 Students</li>
+		<li>Mahathi Infotech – 3.5 LPA – 6 Students</li>
+	</ul>
+</div>
+<div>
+	<h3 class="feedbacks">Feedback from our Top Recruiters</h3>
+	<h4 class="feedbacks">Jayashree .S, Director, Paypal</h4>
+	<p class="feedbackcontent">  The management focuses on Value system and excellent learning environment which are definitely worth a mention. The institution is equipped and capable in their approach.  Wishing the Institution and its visionary management all success to become a destination of choice in engineering education.</p>
+	<h4 class="feedbacks">Neeraj Sharma, Vice President HR, Fourkites</h4>
+	<p class="feedbackcontent">The education system of the Institution is highly innovative and has incorporated the best practices followed in professional & Technical Education. They are consciously working towards a regime wherein Industry’s aspirations for recruiting plug and play kind of employees are met by imparting employability skills to the students.</p>
+	<h4 class="feedbacks">Rajendran D, Founder & Director, Zoho</h4> 
+	<p class="feedbackcontent">The education system of the Institution is highly innovative and has incorporated the best practices followed in professional & Technical Education. They are consciously working towards a regime wherein Industry’s aspirations for recruiting plug and play kind of employees are met by imparting employability skills to the students</p></div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 

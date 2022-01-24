@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon"
+href="/assets/favicon.ico">
+<link rel="stylesheet" href="/assets/dcode.css">
+<link href="https://material.io/resources/icons/?style=baseline" rel="stylesheet">
+<style>
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar {display:flex;
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:70px;
+	background-color:#fa9b36;
+	border-right:2px;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.25);
+	justify-content:center;
+	border-radius:100px 0px 100px 0px;
+	}
+.navbar__link{
+		display:flex;
+		align-items:center;
+		background:#fa9b36;
+		color:black;
+		padding:12px;
+		text-decoration:none;
+		font-weight:bold;
+		font-size:20px;
+		border-bottom:1px solid #fa9b36;
+	}
+.material-icons{
+		margin-right:12px;}
+.navbar__link:hover{color:white;}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  min-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.bottom-left {  border:100px;
+		font-size:30px;
+		text-align:center;
+		padding:0px;
+		background-color:#87ceeb;
+		background-clip:border-box;
+			}
+.top-right {
+			  position: absolute;
+			  top: 8px;
+			  right: 16px;
+			 text-decoration:none; 
+			 font-size:25px;
+			 margin-top:18px;
+			 margin-right:20px;
+			color:white
+				}
+
+		.top-right a{text-decoration:none;
+				color:white;
+				}
+
+				*{
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0;
+			padding:0;
+			font-family: arial;
+			/*font-size: 16px;*/
+			line-height: 1.6
+		}
+		.container{
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		.tab_triger{
+
+		}
+		.tab_triger ul{
+			margin: 0;
+			padding:0;
+			list-style: none;
+			display: flex;
+		}
+		.tab_triger ul li{}
+		.tab_triger ul li label{
+			position: relative;
+			display: block;
+			padding:8px 15px;
+			cursor: pointer;
+			min-width: 10px;
+			background:#e6e6e6;
+			text-align: center;
+			font-weight: 700;
+			text-transform: uppercase;
+			border-radius: 8px 8px 0 0;
+		}
+		.tab_triger ul li:nth-child(1) label{
+			background:#DC7F8E;
+		}
+		.tab_triger ul li:nth-child(2) label{
+			background:#E5A1AA;
+		}
+		.tab_triger ul li:nth-child(3) label{
+			background:#F4BFBE;
+		}
+		.tab_triger ul li:nth-child(4) label{
+			background:#FFE0DA;
+		}
+		.tab_triger ul li:nth-child(5) label{
+			background:#F4C4B2;
+		}
+		.tab_triger ul li:nth-child(6) label{
+			background:#E8808D;
+		}
+		.tab_container_wrap{
+
+		}
+		.tab_container_wrap input{
+			position: absolute;
+			width: 0;
+			height: 0;
+			margin: 0;
+			z-index:-100;
+			top:-10000px;
+		}
+		.tab_container_wrap input:checked + .tab_content_box{
+			display: block;
+		}
+		.tab_content_box{
+			background:#f0f0f0;
+			padding:20px;
+			display: none;
+		}
+		.tab_content_box:nth-of-type(1){
+			background:#DC7F8E;
+		}
+		.tab_content_box:nth-of-type(2){
+			background:#E5A1AA;
+		}
+		.tab_content_box:nth-of-type(3){
+			background:#F4BFBE;
+		}
+		.tab_content_box:nth-of-type(4){
+			background:#FFE0DA;
+		}
+		.tab_content_box:nth-of-type(5){
+			background:#F4C4B2;
+		}
+		.tab_content_box:nth-of-type(6){
+			background:#E8808D;
+		}
+		.tab_content_box h2{
+			margin: 0 0 20px;
+		}
+		.table-box{
+			margin: 50px auto;
+		}
+		.table-row{
+			display: table;
+			width: 80%;
+			margin:10px auto;
+			font-family: sans-serif;
+			background:transparent;
+			padding:12px 0;
+			color:white;
+			font-size:13px;
+			box-shadow: 0 1px 4px 0 rgba(0,0,50,0.3)
+		}
+		.filter{
+			top:0;
+			left:0;
+			right:0;
+			bottom: 0;
+			z-index: 1;
+			opacity:.7;
+		}
+		table{
+			border:1px solid black;
+			padding: 20px;
+			background:white;
+		}
+		.whole{
+			text-align: center;
+			border-spacing: 2px;
+		}
+		.left_align{
+			float: left;
+			width:28%;
+			padding:3px;
+		}
+		.alignment::after{
+			content:"";
+			clear:both;
+			display: table;
+		}
+		/*.box{
+    			position: relative;
+    			display: inline-block;
+    		}
+    		.box .text{
+    			position: absolute;
+    			z-index: 999;
+    			margin: 0 auto;
+    			left: 0;
+    			right: 0;
+    			top: 80%;
+    			text-align: center;
+    			width: 100%;
+    			color:white;
+    			text-shadow: 1px 1px black;
+    		}*/
+</style>
+
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://media-exp1.licdn.com/dms/image/C561BAQH3btCghFR_kg/company-background_10000/0?e=2159024400&v=beta&t=oL1fdme13R_ksHYTQX8e_S_aOL1qxZJuISQxk-x5FxQ" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2017/10/infra2-600x400.jpg" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2015/08/1.jpg" style="width:100%"; height="366px">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="container1">
+  <div class="bottom-left">Training</div>
+  <div class="top-right"><a href="https://www.kpriet.ac.in/">HOME</a>&nbsp>&nbspTRAINING</div>
+</div>
+<br>
+<div class="navbar">
+		<a href="About us.html" class="navbar__link">
+			<span class="material-icons">info</span>About us</a>
+		<a href="Statistics.html" class="navbar__link">
+			<span class="material-icons">trending_up</span>Statistics</a>
+		<a href="Recruiters.html" class="navbar__link">
+			<span class="material-icons">groups</span>Our Recruiters</a>
+		<a href="Teamplacement.html" class="navbar__link">
+			<span class="material-icons">business_center</span>Team Placement</a>
+		<a href="Training.html" class="navbar__link">
+			<span class="material-icons">model_training</span>Trainings</a>
+		<a href="Testimonial page.html" class="navbar__link">
+			<span class="material-icons">how_to_reg</span>Testimonials</a>
+		<a href="contactus.html" class="navbar__link">
+			<span class="material-icons">contact_phone</span>Contact Us</a>
+</div>
+<br><br><br><br>
+
+<div class="container">
+		<div class="tab_triger">
+			<ul>
+				<li><label for="tab1">About us</label></li>
+				<li><label for="tab2">Team Training</label></li>
+				<li><label for="tab3">Skill Focussed</label></li>
+				<li><label for="tab4">Training Plan</label></li>
+				<li><label for="tab5">Winter Vacation Training</label></li>
+				<li><label for="tab6">Summer Vacation Training</label></li>
+		    </ul>
+	    </div>
+	    <div class="tab_container_wrap">
+	    	<input type="radio" checked id="tab1" name="1">
+	    	<div class="tab_content_box">
+	    		<h2><u>About us</u></h2>
+	    		<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAt KPRIET, summer trainings, full-term trainings, 'On-the-job' trainings, study tours, and skill enhancement events and workshops are extensively integrated in the curriculum. They expose students to real work environments and provide an opportunity to apply their learning in real life situations. Training of students and eqipping them with life skills has become an important responsibilty of the institution. Along with technical expertise, development of a holistic personality is also necessary. To meet out these requirements, a fully fledged training cell is operating in our college to enhance the capabilities of engineering graduates on par with the industry standards.</p>
+	    		<h2><u>Objectives</u></h2>
+	    		<p><ul>
+	    			<li>To provide 100% placement for all the students.</li>
+	    			<li>To motivate the students and build their confidence.</li>
+	    			<li>To develop the right attitute in them.</li>
+	    			<li>To enhance their skills.</li>
+	    			<li>To make them Industry Ready.</li>
+	    		</ul></p>
+	    		<h2><u>Activities</u></h2>
+	    		<p><ul>
+	    			<li>Career Guidance and Career Support Programs.</li>
+	    			<li>To train the students on communication skills and personality development.</li>
+	    			<li>Training students in Quantitative Aptitude, Logical Reasoning and Verbal Reasoning through Corporate Trainers, Industry Experts and In-House Trainers.</li>
+	    			<li>To train the students and to improve their Coding Skills in latest Programming Languages.</li>
+	    			<li>To train the students on Group Discussion & Interview skills.</li> 
+	    			<li>To Conduct Online assessments.</li> 
+	    			<li>Company Specific Training.</li> 
+	    			<li>Industry Connect Training Programs.</li>
+	    		</ul></p>
+	    	</div>
+	    	<input type="radio" id="tab2" name="1">
+	    	<div class="tab_content_box">
+	    		<center>
+                <div class="box">
+                	<a href="https://imgbb.com/"><img src="https://i.ibb.co/kK0DM0g/Raja-Jegan.jpg" alt="Raja-Jegan" border="0"></a>
+                	<div class="text">
+				<p><h2>Mr.T.Raja Jegan</h2></p>
+				<p><h4>Placement Trainer</h4></p>
+			</div>
+		    </div><br>
+        </center>
+	    		<p><b>Mr.T.Rajajegan</b> carries with him an array of experience which ranges from IT industry to academic training. Having done his Masters in Software Engineering from College of Engineering, Guindy – he has provided trainings to around 70 Engineering colleges all over south India – VIT, SRM Institutions, Thiagarajar College of Engineering, BMS, Bangalore Institute of Technology  are the big names to name a few. An expert in Quantitative Aptitude Training, has conducted classes for various competitive exams that include CAT, XAT, NIFT, CLAT, IIT-HSEE. His classes are very well received for his completely innovative and shortcut methods which differs from the conventional aptitude training.</p>
+	    		<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/Fh1QD4x/Renugadevi.jpg" alt="Renugadevi" border="0"></a></center>
+	    		<center><h2>Ms.S.Renuka Devi</h2><h4>Placement Trainer</h4></center>
+	    		<p><b>Ms. S. Renuka Devi</b> is an enthusiastic trainer & Facilitator with over 12 years of experience, where 8 years worked as an Assistant professor and 4 Years as Soft Skill and Technical trainer in various reputed colleges. She holds the degree of Master in Computer Applications and M.E. in Computer Science Engineering.  She is also an instrumental in organizing various outreach events such as Ideathon-Hackathon, Networking events, Out Bound Training, DT BootCamp and International Edu Trip. She has acted as a co-organizer of TEDx.</p>
+	    	</div>
+	    	<input type="radio" id="tab3" name="1">
+	    	<div class="tab_content_box">
+	    		<div class="alignment">
+	    		<div class="left_allign"><h2><u>Aptitude</u></h2>
+	    		<ul>
+	    			<li>Focus and Self Control.</li>
+	    			<li>Perspective Taking.</li>
+	    			<li>Making Connections.</li>
+	    			<li>Critical thinking.</li>
+	    			<li>Taking On Challenges.</li>
+	    			<li>Self-Directed,Engaged Learning.</li>
+	    		</ul></div>
+	    		<div class="left_allign"><h2><u>Technical</u></h2>
+	    		<ul>
+	    			<li>Programming Languages.</li>
+	    			<li>Common Operating Systems.</li>
+	    			<li>Software proficiency.</li>
+	    			<li>Technical.</li>
+	    			<li>Domain based technical training.</li>
+	    			<li>Project Management.</li>
+	    			<li>Data Analysis</li>
+	    		</ul></div>
+	    		<div class="left_allign"><h2><u>Communication</u></h2>
+	    		<ul>
+	    			<li>Active listening.</li>
+	    			<li>Asking questions</li>
+	    			<li>Business Storytelling</li>
+	    			<li>Negotiation.</li>
+	    		</ul></div>
+	    		<div class="left_allign"><h2><u>Soft skill</u></h2>
+	    		<ul>
+	    			<li>Team work.</li>
+	    			<li>Leadership.</li>
+	    			<li>Resume building.</li>
+	    			<li>Interview skills.</li>
+	    			<li>Time management and stress management.</li>
+	    			<li>Decision making.</li>
+	    			<li>Attitude and Work Ethics.</li>
+	    			<li>Adaptability/Flexibility.</li>
+	    		</ul></div></div>
+	    	</div>
+	    	<input type="radio"  id="tab4" name="1">
+	    	<div class="tab_content_box">
+	    		<ul><li>Regular Training.</li>
+	    			<li>Winter Vacation Training.</li>
+	    			<li>Summer Vacation Vacation Training.</li>
+	    		</ul>
+	    		<h2><u>REGULAR TRAINING</u></h2>
+	    		<h3>Batch (2019-2023)</h3>
+
+	    		<div class="filter">
+	    		</div>
+
+	    		<table>
+	    				<tr>
+	    					<td><u><h4>Semester - </h4></u></td>
+	    					<td><u><h4>Progressive Learning (Course + Certificate + Coding Platform + FDP)</h4></u></td>
+	    				<tr>
+	    					<td>Sem-1</td>
+	    					<td>CSE students- ‘Python Programming’.</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-1</td>
+	    					<td>Non-CSE students- ‘Python Programming’</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-2</td>
+	    					<td>CSE students- ‘Computational Thinking via Python’</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-2</td>
+	    					<td>Non-CSE students- ‘Computational Thinking via Python’</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-3</td>
+	    					<td>CSE students- WebApp Development(HTML, CSS, JS & Flask framework)+ mini project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-3</td>
+	    					<td>Non-CSE students- ‘MySQL DB’</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-4</td>
+	    					<td>CSE students- ‘AngularJS’ (WebApp Development), and MongoDB + mini project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-4</td>
+	    					<td>Non-CSE students- WebApp Development(HTML, CSS, JS & Flask framework)+ project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-5</td>
+	    					<td>CSE students- ‘NodeJS’ (WebApp Development) + mini project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-5</td>
+	    					<td>Non-CSE students- ‘Machine Learning’ + mini project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-6</td>
+	    					<td>CSE students- ‘Machine Learning’ + mini project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-6</td>
+	    					<td>Non-CSE students- ‘AngularJS’ (WebApp Development) + mini project</td>
+	    				</tr>
+	    		</table>
+	    			<h3>Batch (2018-2022)</h3>
+
+	    			<div class="filter">
+	    			</div>
+
+	    		<table>
+	    				<tr>
+	    					<td><u><h4>Semester - </h4></u></td>
+	    					<td><u><h4>Progressive Learning</h4></u></td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-3</td>
+	    					<td>Basic Aptitude, Verbal and Soft Skill</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-4</td>
+	    					<td>VAC , Miniproject</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-5</td>
+	    					<td>Technical Training  – GUVI & KPR Tools, Mini Project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-6</td>
+	    					<td>Online Practice – Mock Interview</td>
+	    				</tr>
+	    		</table>
+	    			<h3>Batch (2017-2021)</h3>
+
+	    			<div class="filter">
+	    			</div>
+
+	    		<table>
+	    				<tr>
+	    					<td><u><h4>Semester - </h4></u></td>
+	    					<td><u><h4>Progressive Learning</h4></u></td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-5</td>
+	    					<td>Technical Training  – GUVI & KPR Tool, Mini Project</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-6</td>
+	    					<td>Online Practice (KPR Tool & GUVI Platform) – Mock Interview</td>
+	    				</tr>
+	    		</table>
+	    			<h3>Batch (2016-2020)</h3>
+
+	    			<div class="filter">
+	    			</div>
+
+	    		<table>
+	    				<tr>
+	    					<td><u><h4>Semester - </h4></u></td>
+	    					<td><u><h4>Progressive Learning</h4></u></td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-7</td>
+	    					<td>Company Specific Training, Mock Interview</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Sem-8</td>
+	    					<td>Company Specific Training, Mock Interview</td>
+	    				</tr>
+	    		</table>
+	    			</div>
+	    			<input type="radio" id="tab5" name="1">
+	    			<div class="tab_content_box">
+	    		<h2><u>Winter Vacation Training</u></h2>
+	    		<p>Winter vacation training is planned for pre final years from December 2<sup>nd</sup> 2019 to December 28<sup>th</sup> 2019.</p>
+	    	</div>
+	    	<input type="radio" id="tab6" name="1">
+	    	<div class="tab_content_box">
+	    		<h2><u>Summer Vacation Training for 2016 to 2020 batch</u></h2>
+	    		<table class="whole" border="1" cellspacing="0">
+		<tr>
+			<th>S.No.</th>
+			<th>Date</th>
+			<th>Branch</th>
+			<th>Training Programme</th>
+			<th>No. of students Attended</th>
+		</tr>
+		<tr>
+			<td>1</td>
+		    <td>2<sup>nd</sup>-24<sup>th</sup> May 2019</td>
+			<td>Civil</td>
+			<td>E-tab, QTO and Total station</td>
+			<td>65</td>
+		</tr>
+		<tr>
+			<td rowspan="2">2</td>
+			<td>13<sup>th</sup>-17<sup>th</sup> May 2019</td>
+			<td rowspan="2">Mechanical</td>
+			<td>Python Programming and Soft Skills</td>
+			<td>62</td>
+		</tr>
+		<tr>
+			<td>13<sup>th</sup>-17<sup>th</sup> May 2019</td>
+			<td>Infosys Training(Infy Tq)</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td rowspan="3">3</td>
+			<td>13<sup>th</sup>-17<sup>th</sup> May 2019</td>
+			<td rowspan="3">EEE</td>
+			<td>Python Programming</td>
+			<td>65</td>
+		</tr>
+		<tr>
+			<td>27<sup>th</sup>-31<sup>st</sup> May 2019</td>
+			<td>Aptitude & Soft Skills</td>
+			<td>40</td>
+		</tr>
+		<tr>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td>Infosys Training(Infy Tq)</td>
+			<td>42</td>
+		</tr>
+		<tr>
+			<td rowspan="3">4</td>
+			<td>13<sup>th</sup>-17<sup>th</sup> May 2019</td>
+			<td rowspan="3">ECE</td>
+			<td>Python Programming</td>
+			<td>68</td>
+		</tr>
+		<tr>
+			<td>27<sup>th</sup>-31<sup>st</sup> May 2019</td>
+			<td>Aptitude & Soft Skills</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td>Infosys Training(Infy Tq)</td>
+			<td>32</td>
+		</tr>
+		<tr>
+			<td rowspan="3">5</td>
+			<td>13<sup>th</sup>-17<sup>th</sup> May 2019</td>
+			<td rowspan="3">CSE</td>
+			<td>Python Programming</td>
+			<td>82</td>
+		</tr>
+		<tr>
+			<td>27<sup>th</sup>-31<sup>st</sup> May 2019</td>
+			<td>Aptitude & Soft Skills</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td>Infosys Training(Infy Tq)</td>
+			<td>81</td>
+		</tr>
+	</table><br><br>
+	<h2><u>Summer Vacation Training for 2017 to 2021 batch</u></h2>
+	    		<table class="whole" border="1" cellspacing="0">
+		<tr>
+			<th>S.No.</th>
+			<th>Date</th>
+			<th>Branch</th>
+			<th>Training Programme</th>
+			<th>No.of Students Attended</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>27<sup>th</sup>-31<sup>st</sup> May 2019</td>
+			<td>Civil</td>
+			<td>Revit Architecture</td>
+			<td>45</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>19<sup>th</sup>-21<sup>st</sup> June 2019</td>
+			<td>Mechanical</td>
+			<td>Solid works/Geometric Dimensions & Tolerance/CNC</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td rowspan="2">3</td>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td rowspan="2">EEE</td>
+			<td>Python Programming</td>
+			<td>41</td>
+		</tr>
+		<tr>
+			<td>10<sup>th</sup>-14<sup>st</sup> June 2019</td>
+			<td>Modern Simulation Tools(DIALUX & PVSyst)</td>
+			<td>37</td>
+		</tr>
+		<tr>
+			<td rowspan="5">4</td>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td rowspan="5">ECE</td>
+			<td>Python Programming</td>
+			<td>37</td>
+		</tr>
+		<tr>
+			<td rowspan="4">10<sup>th</sup>-14<sup>th</sup> June 2019</td>
+			<td>Machine Learning</td>
+			<td>35</td>
+		</tr>
+		<tr>
+			<td>CST Antenna Design S/W</td>
+			<td>33</td>
+		</tr>
+		<tr>
+			<td>Lab View</td>
+			<td>34</td>
+		</tr>
+		<tr>
+			<td>VERILOG</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td>CSE</td>
+			<td>Python Programming</td>
+			<td>94</td>
+		</tr>
+	</table><br><br>
+	<h2><u>Summer Vacation Training for 2018 to 2022 batch</u></h2>
+	    		<table class="whole" border="1" cellspacing="0">
+		<tr>
+			<th>S.No.</th>
+			<th>Date</th>
+			<th>Branch</th>
+			<th>Training Programme</th>
+			<th>No.of Students Attended</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>3<sup>rd</sup>-5<sup>th</sup> June 2019</td>
+			<td>Civil</td>
+			<td>3D Modelling</td>
+			<td>40</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td>Mechanical</td>
+			<td>Auto CAD</td>
+			<td>18</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>27<sup>th</sup>-31<sup>st</sup> May 2019</td>
+			<td>EEE</td>
+			<td>C-Programming</td>
+			<td>61</td>
+		</tr>
+		<tr>
+			<td rowspan="4">4</td>
+			<td rowspan="4">27<sup>th</sup>-31<sup>st</sup> May 2019</td>
+			<td rowspan="4">ECE</td>
+			<td>MAT lab</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>Arduino</td>
+			<td>31</td>
+		</tr>
+		<tr>
+			<td>PCB</td>
+			<td>28</td>
+		</tr>
+		<tr><b>
+			<td>Total</td>
+			<td>70</td></b>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td>ECE(2<sup>nd</sup> batch)</td>
+			<td>Arduino</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>3<sup>rd</sup>-7<sup>th</sup> June 2019</td>
+			<td>CSE</td>
+			<td>Java Programming</td>
+			<td>81</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>27<sup>th</sup>-31<sup>st</sup> May 2019</td>
+			<td>BME</td>
+			<td>MAT Lab</td>
+			<td>25</td>
+		</tr>
+	</tables>
+   	</div>
+	    </div>
+	</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 

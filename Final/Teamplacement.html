@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon"
+href="/assets/favicon.ico">
+<link rel="stylesheet" href="/assets/dcode.css">
+<link href="https://material.io/resources/icons/?style=baseline" rel="stylesheet">
+<style>
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar {display:flex;
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:70px;
+	background-color:#fa9b36;
+	border-right:2px;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.25);
+	justify-content:center;
+	border-radius:100px 0px 100px 0px;
+	}
+.navbar__link{
+		display:flex;
+		align-items:center;
+		background:#fa9b36;
+		color:black;
+		padding:12px;
+		text-decoration:none;
+		font-weight:bold;
+		font-size:20px;
+		border-bottom:1px solid #fa9b36;
+	}
+.material-icons{
+		margin-right:12px;}
+.navbar__link:hover{color:white;}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  min-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.bottom-left {  border:100px;
+		font-size:30px;
+		text-align:center;
+		padding:0px;
+		background-color:#87ceeb;
+		background-clip:border-box;
+			}
+.top-right {
+			  position: absolute;
+			  top: 8px;
+			  right: 16px;
+			 text-decoration:none; 
+			 font-size:25px;
+			 margin-top:18px;
+			 margin-right:20px;
+			color:white
+				}
+
+		.top-right a{text-decoration:none;
+				color:white;
+				}
+
+				body{
+			margin:0;
+			padding: 0;
+			font-family: sans-serif;
+			background-image: url("https://image.shutterstock.com/image-photo/blur-abstract-background-260nw-742715635.jpg");
+			background-size:cover;
+		}
+		.container{
+			position: relative;
+			margin-top: 250px;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width:600px;
+			padding: 30px;
+			background:#fff;
+			box-sizing: border-box;
+			border-radius: 10px;
+			box-shadow: 50px 15px 50px rgba(0,0,0,.2);
+		}
+		section{
+			padding: 100px;
+		}
+		.circle{
+			width: 300px;
+			height: 300px;
+			background:url(https://www.kpriet.ac.in/wp-content/uploads/2019/06/Dr.-Thamaraikannan-B.jpg);
+			float: left;
+			margin:30px 30px 30px 0;
+			border-radius: 50%;
+			shape-outside: circle();
+		}
+		p{
+			line-height: 22px;
+			margin:0;
+			padding: 0;
+			text-align: justify;
+		}
+
+</style>
+
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://media-exp1.licdn.com/dms/image/C561BAQH3btCghFR_kg/company-background_10000/0?e=2159024400&v=beta&t=oL1fdme13R_ksHYTQX8e_S_aOL1qxZJuISQxk-x5FxQ" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2017/10/infra2-600x400.jpg" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2015/08/1.jpg" style="width:100%"; height="366px">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="container1">
+  <div class="bottom-left">Team Placement</div>
+  <div class="top-right"><a href="https://www.kpriet.ac.in/">HOME</a>&nbsp>&nbspTEAM PLACEMENT</div>
+</div>
+<br>
+<div class="navbar">
+		<a href="About us.html" class="navbar__link">
+			<span class="material-icons">info</span>About us</a>
+		<a href="Statistics.html" class="navbar__link">
+			<span class="material-icons">trending_up</span>Statistics</a>
+		<a href="Recruiters.html" class="navbar__link">
+			<span class="material-icons">groups</span>Our Recruiters</a>
+		<a href="Teamplacement.html" class="navbar__link">
+			<span class="material-icons">business_center</span>Team Placement</a>
+		<a href="Training.html" class="navbar__link">
+			<span class="material-icons">model_training</span>Trainings</a>
+		<a href="Testimonial page.html" class="navbar__link">
+			<span class="material-icons">how_to_reg</span>Testimonials</a>
+		<a href="contactus.html" class="navbar__link">
+			<span class="material-icons">contact_phone</span>Contact Us</a>
+</div>
+<br><br><br><br>
+<section>
+
+		<div class="container">
+			<center><h2>Dr. Thamaraikannan B<br> Director - Training & Placement</h2></center>
+			<div class="circle"></div>
+		Dr.Thamaraikannan has a Doctorate in Mechanical Engineering from Anna University, Chennai and has around 12+ years of Industrial and Placement related experience. He is responsible for liaisoning with the various industry personnel and persuading them to visit the college campus for conducting recruitment drives. With a vast network of industrial contacts, he has established a proven course for giving students the right opportunity and platform to launch their career from. An able administrator, he is the main reason behind the heartwarming smiles and cheers that a successful placement process brings to the faces of our students.</p><p>Placements take place between the second and final year of your degree.<br>They give you experience of seeking and securing a job, and working in an industry relevant to your course. You'll gain invaluable experience, knowledge and contacts, along with skills that you can apply to your final year at university – and in your future career.<br>Completing a placement improves your chances of securing a graduate role, with employers reporting that they rehired an average of 52% of their interns and 43% of their summer placement students.</p></div>
+	</section>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 

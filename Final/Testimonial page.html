@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+font-family: Verdana, sans-serif;
+background-image: url("data:image/jpeg;base64,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");
+background-size: cover;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  min-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.bottom-left {  border:100px;
+		font-size:30px;
+		text-align:center;
+		padding:0px;
+		background-color:#87ceeb;
+		background-clip:border-box;
+			}
+.top-right {
+			  position: absolute;
+			  top: 8px;
+			  right: 16px;
+			 text-decoration:none; 
+			 font-size:25px;
+			 margin-top:18px;
+			 margin-right:20px;
+			color:white
+				}
+
+		.top-right a{text-decoration:none;
+				color:white;
+				}
+		@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar {display:flex;
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:70px;
+	background-color:#fa9b36;
+	border-right:2px;
+	margin-top:15px;
+	margin-top:15px;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.25);
+	justify-content:center;
+	border-radius:100px 0px 100px 0px;
+	}
+.navbar__link{
+		display:flex;
+		align-items:center;
+		background:#fa9b36;
+		color:black;
+		padding:12px;
+		text-decoration:none;
+		font-weight:bold;
+		font-size:20px;
+		border-bottom:1px solid #fa9b36;
+	}
+.material-icons{margin-right:12px;}
+.navbar__link:hover{color:white;}
+
+		#tptkcontent{justify-content:space-between; display:flex; font-size:17px;}
+		#highlights{ text-decoration:underline; margin-left:30px;}
+		#highlightul{font-size:20px; margin-left:50px;}
+		.feedbacks{margin-left:30px; text-decoration:underline;}
+		.feedbackcontent{margin-left:70px;}
+
+		body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+a{
+	text-decoration: none;
+}
+button{
+	font-family:consolas;
+	text-transform:uppercase;
+	font-size:20px;
+	border:1px solid black;
+	display: block;
+	text-decoration: none;
+	margin:20px auto;
+	color:#2196f3;
+	overflow:hidden;
+	background-color:black;
+	transition: 0.3s;
+}
+button:hover{
+	color: black;
+	background:#2196f3;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.static{
+	background-color: black;
+	border-radius: 80px;
+	padding:20px;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://media-exp1.licdn.com/dms/image/C561BAQH3btCghFR_kg/company-background_10000/0?e=2159024400&v=beta&t=oL1fdme13R_ksHYTQX8e_S_aOL1qxZJuISQxk-x5FxQ" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2017/10/infra2-600x400.jpg" style="width:100%"; height="366px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.kpriet.ac.in/wp-content/uploads/2015/08/1.jpg" style="width:100%"; height="366px">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="container1">
+  <div class="bottom-left">Testimonials</div>
+  <div class="top-right"><a href="https://www.kpriet.ac.in/">HOME</a>>&nbspTESTIMONIALS</div>
+</div>
+<div class="navbar">
+		<a href="About us.html" class="navbar__link">
+			<span class="material-icons">info</span>About us</a>
+		<a href="Statistics.html" class="navbar__link">
+			<span class="material-icons">trending_up</span>Statistics</a>
+		<a href="Recruiters.html" class="navbar__link">
+			<span class="material-icons">groups</span>Our Recruiters</a>
+		<a href="Teamplacement.html" class="navbar__link">
+			<span class="material-icons">business_center</span>Team Placement</a>
+		<a href="Training.html" class="navbar__link">
+			<span class="material-icons">model_training</span>Trainings</a>
+		<a href="Testimonial page.html" class="navbar__link">
+			<span class="material-icons">how_to_reg</span>Testimonials</a>
+		<a href="contactus.html" class="navbar__link">
+			<span class="material-icons">contact_phone</span>Contact Us</a>
+</div><br><br>
+
+<center class="static">
+<a href="Student Review.html">
+	<button>Click here to see Student Reviews</button>
+</a></center>
+
+<center>
+  <h2><i>"In association with KPRIET for mutual enhancement"</i></h2>
+  <p><b>Mr.T.M.Khaleel</b><br>Joint Managing Director, E.K.M.Leather Processing Company</p>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/mqFDZz0tk3U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center><hr>
+
+  <h2><i>"Interaction with real time processes at KPRIET"</i></h2>
+  <p><b>Dr.S.Prabhakar</b><br>BARC Scientist (Retd)</p>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QSkal7drbsQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center><hr>
+
+  <h2><i>"KPRIET is awesome in shaping future engineers"</i></h2>
+  <p><b>Dr.Saravanan</b><br>General Manager, Indo Shell Private Limited, Coimbatore</p>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/xGsvtZpK9VI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center><hr>
+
+  <h2><i>"Education in tandem with Research at KPRIET"</i></h2>
+  <p><b>Dr.P.Malathy</b><br>Assistant Professor, Government Arts College, Coimbatore</p>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/T3kY_YZFSJQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center><hr>
+
+  <h2><i>"KPRIET fosters Industry ready engineers"</i></h2>
+  <p><b>Mr.Shantha Kumar</b><br>Managing Director,Vital Bio-Systems, Chennai</p>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/8g8fJZ9ax20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center><hr>
+
+  <h2><i>"Promising and Skillful Engineers at KPRIET"</i></h2>
+  <p><b>Er.R.Aravindraj</b><br>Managing Director, Aravind Associate</p>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/eWgdJL5BMBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center><hr>
+</center>
+
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
